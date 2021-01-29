@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28 janv. 2021 14:09:33 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.Product" table="product" catalog="nanoproject" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="50" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
